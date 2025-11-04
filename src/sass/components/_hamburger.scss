@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.hamburger {
+  position: fixed;
+  top: rem(37);
+  right: rem(19);
+  z-index: var(--z-index-hamburger);
+  transition: right 0s;
+  @include mq('md') {
+    top: rem(39);
+    right: clamp(10px, calc(10px + 29 * var(--fluid-basis)), 59px);
+  }
+}
+
+body.body-hidden .hamburger {
+  right: calc(rem(19) + var(--scrollbar-width, 0px));
+  @include mq('md') {
+    right: calc(rem(59) + var(--scrollbar-width, 0px));
+  }
+}
+
+.hamburger__button {
+  width: rem(62);
+  aspect-ratio: 1;
+  background: url('../images/common/hamburger-bg.webp') no-repeat center center / cover;
+  border-radius: calc(infinity * 1px);
+  position: relative;
+
+  span {
+    width: rem(21);
+    height: 2px;
+    background-color: var(--text-black);
+    -webkit-mask-image: url('../images/common/hamburger-line.svg');
+    mask-image: url('../images/common/hamburger-line.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: 0.5s ease;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    &:nth-of-type(1) {
+      top: calc(50% - rem(7));
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+    }
+    &:nth-of-type(3) {
+      top: calc(50% + rem(7));
+    }
+  }
+
+  &.is-open {
+    span:nth-of-type(1) {
+      rotate: 35deg;
+      top: 50%;
+    }
+
+    span:nth-of-type(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    span:nth-of-type(3) {
+      rotate: -35deg;
+      top: 50%;
+    }
+  }
+}

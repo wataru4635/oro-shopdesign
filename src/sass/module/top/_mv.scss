@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.mv {
+  margin-top: rem(37);
+  container-type: inline-size;
+}
+
+.mv__inner {
+  display: grid;
+  grid-template-columns: 21fr 294fr;
+  padding-left: calc((#{"45 * 100"} / var(--cq-ref-mobile) * 1cqw));
+  @media (max-width: 767px) {
+    gap: calc((#{"30 * 100"} / var(--cq-ref-mobile) * 1cqw));
+  }
+  @include mq('md') {
+    grid-template-columns: 90fr 21fr 752fr;
+    padding-inline: clamp(59px, calc(59px + 80 * var(--fluid-basis)), 139px) clamp(51px, calc(51px + 120 * var(--fluid-basis)), 171px);
+  }
+  @include mq('xl') {
+    padding-inline: calc((#{"139 * 100"}) / var(--cq-ref) * 1cqw) calc((#{"171 * 100"}) / var(--cq-ref) * 1cqw);
+  }
+}
+
+.mv__nav {
+  display: block;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mv__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc((#{"37 * 100"} / var(--cq-ref) * 1cqw));
+  margin-top: calc((#{"62 * 100"} / var(--cq-ref) * 1cqw));
+}
+
+.mv__nav-link {
+  color: var(--text-gray);
+  font-family: var(--font-family-second);
+  font-size: max(12px, calc((#{"15 * 100"} / var(--cq-ref) * 1cqw)));
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: rem(1);
+}
+
+.mv__nav-link::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  opacity: .5;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform 0.6s cubic-bezier(0.6, 0, 0, 1);
+}
+
+
+.mv__nav-link:hover::before {
+  transform: scale(1, 1);
+  transform-origin: left top;
+}
+
+.mv__text {
+  writing-mode: vertical-rl;
+  color: var(--text-gray);
+  font-feature-settings: 'vert' on;
+  font-family: var(--font-family-third);
+  font-size: 20px;
+  font-weight: var(--font-weight-extra-bold);
+  line-height: 1.6;
+  letter-spacing: .5em;
+  margin-top: calc((#{"24 * 100"} / var(--cq-ref-mobile) * 1cqw));
+  @include mq('md') {
+    margin-top: calc((#{"50 * 100"} / var(--cq-ref) * 1cqw));
+    margin-left: calc((#{"124 * 100"} / var(--cq-ref) * 1cqw));
+    font-size: max(14px, calc((#{"20 * 100"} / var(--cq-ref) * 1cqw)));
+  }
+}
+
+.mv__swiper {
+  margin-inline: 0;
+  @include mq('md') {
+    margin-inline: calc((#{"69 * 100"} / var(--cq-ref) * 1cqw)) 0;
+  }
+}
+
+
+.mv__slide-img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 60px 0 0 60px;
+  aspect-ratio: 294 / 441;
+  @include mq('md') {
+    aspect-ratio: 752 / 533;
+  }
+}

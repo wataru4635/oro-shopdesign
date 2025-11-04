@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.section-title {
+  padding-bottom: rem(18);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--text-black);
+  height: 2px;
+  @include mq('md') {
+    max-width: rem(445);
+    width: 100%;
+  }
+}
+
+.section-title__img {
+  height: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}

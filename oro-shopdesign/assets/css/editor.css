@@ -1,0 +1,57 @@
+.editor-styles-wrapper h2 {
+  margin-top: 15px;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper h4 {
+  margin-top: 15px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper h5 {
+  margin-top: 15px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper a {
+  text-decoration: underline currentColor;
+}
+
+.editor-styles-wrapper ul {
+  padding-left: 21px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.editor-styles-wrapper ul li {
+  font-size: 15px;
+}
+
+.editor-styles-wrapper ol {
+  padding-left: 21px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.editor-styles-wrapper ol li {
+  font-size: 15px;
+}
+

@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.arrow-down {
+  text-align: center;
+  margin-top: rem(43);
+}
+
+.arrow-down__img {
+  width: rem(29);
+  height: auto;
+  background-color: var(--white);
+  -webkit-mask-image: url('../images/common/arrow-down.svg');
+  mask-image: url('../images/common/arrow-down.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  display: inline-block;
+  transition: background-color var(--duration-semi-long) ease-in-out;
+  aspect-ratio: 35.934 / 207;
+  @include mq('md') {
+    width: rem(36);
+  }
+}

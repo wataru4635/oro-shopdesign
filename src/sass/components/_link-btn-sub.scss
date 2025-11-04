@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.link-btn-sub {
+  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  padding-block: rem(21) rem(22);
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: rem(11);
+  transition: opacity var(--duration-base) ease;
+  width: 100%;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @include mq('md') {
+    min-width: rem(330);
+    width: fit-content;
+  }
+}
+
+.link-btn-sub--white {
+  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  & .link-btn-sub__text {
+    color: var(--text-black);
+    border: 1px solid var(--text-black);
+  }
+}
+
+.link-btn-sub--blue {
+  background: url('../images/common/works-bg_blue.webp') no-repeat center center / cover;
+}
+
+.link-btn-sub--blue .link-btn-sub__text {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.link-btn-sub__text {
+  min-width: rem(214);
+  
+  border-radius: calc(infinity * 1px);
+  font-family: var(--font-family-second);
+  font-size: rem(15);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: calc(1.5 / 15 * 1em);
+  line-height: 2;
+  padding-block: rem(7) rem(8);
+  padding-inline: rem(15) rem(11);
+  @include mq('md') {
+    min-width: rem(214);
+  }
+}
