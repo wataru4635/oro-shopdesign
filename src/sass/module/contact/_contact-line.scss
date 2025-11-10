@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.contact-line {
+  background: url('../images/works/single-works-bg-sp.webp') repeat top center / 100%;
+  padding-block: rem(46) rem(63);
+  @include mq('md') {
+  padding-block: rem(66) rem(76);
+  background: url('../images/works/single-works-bg.webp') repeat top center / 100%;
+  }
+}
+
+.contact-line__inner {
+padding-inline: var(--inner-padding);
+margin-inline: auto;
+max-width: 500px;
+@include mq('md') {
+  max-width: calc(615px + 2 * var(--inner-padding));
+}
+}
+
+.contact-line__heading {
+display: grid;
+grid-template-columns: max-content 1fr;
+gap: rem(8);
+@media (max-width: 767px) {
+margin-left: rem(5);
+}
+}
+
+.contact-line__icon {
+  width: rem(31);
+aspect-ratio: 1 / 1;
+object-fit: contain;
+}
+
+.contact-line__title {
+  color: var(--white);
+  font-family: var(--font-family-second);
+  font-size: rem(20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  letter-spacing: calc(2 / 20 * 1em);
+}
+
+.contact-line__lead {
+  color: var(--white);
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: rem(26);
+}
+
+.contact-line__block {
+margin-top: rem(35);
+@include mq('md') {
+margin-top: rem(39);
+}
+}
+
+.contact-line__block.contact-line__block--id {
+  @include mq('md') {
+  margin-top: rem(63.5);
+  }
+}
+
+
+
+.contact-line__subtitle {
+  color: var(--white);
+  font-size: rem(15);
+  font-weight: var(--font-weight-normal);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+}
+
+.contact-line__text {
+  color: var(--white);
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+  margin-top: rem(3);
+  @include mq('md') {
+    margin-top: rem(9);
+  }
+}
+
+.contact-line__img-wrap {
+width: rem(143.829);
+margin-inline: auto;
+margin-top: rem(35);
+@include mq('md') {
+  margin-top: rem(27);
+}
+}
+
+.contact-line__img {
+aspect-ratio: 1 / 1;
+object-fit: contain;
+}
+
+.contact-line__id {
+margin-top: rem(14);
+width: 100%;
+background-color: var(--main-blue);
+padding: rem(10) rem(21);
+@include mq('md') {
+margin-top: rem(27);
+padding: rem(10) rem(150);
+}
+}
+
+.contact-line__id-text {
+  color: var(--white);
+  text-align: center;
+  font-size: rem(15);
+  font-weight: var(--font-weight-normal);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+}
+

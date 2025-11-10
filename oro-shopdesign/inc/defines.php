@@ -14,3 +14,11 @@ define('BLOG_URL',             esc_url(home_url('/blog/')));                    
 define('CONTACT_URL',          esc_url(home_url('/contact/')));                  // お問い合わせ
 define('CONTACT_CONFIRM_URL',  esc_url(home_url('/contact-confirm/')));          // お問い合わせ確認
 define('CONTACT_THANKS_URL',   esc_url(home_url('/contact-thanks/')));           // お問い合わせ完了
+
+/* ---------- メール設定 ---------- */
+define('ADMIN_CONTACT_EMAIL',  'contact@oro-sekkei.com');                        // 管理者受信用メールアドレス
+define('REPLY_EMAIL',          'contact@oro-shopdesign.com');                    // 自動返信送信元メールアドレス
+define('SITE_NAME',            'oroショップデザイン｜oro株式会社');                // サイト名
+
+/* ---------- その他設定 ---------- */
+define('WORKS_TITLE_MAX_LENGTH', 24);                                            // 施工事例のタイトル最大文字数

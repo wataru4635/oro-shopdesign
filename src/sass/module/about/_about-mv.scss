@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.about-mv {
+  margin-top: rem(52);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.about-mv__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-inline: auto;
+  padding-inline: var(--inner-padding);
+  @include mq('md') {
+    align-items: center;
+    grid-template-columns: 613fr 135fr;
+    padding-inline: clamp(80px, calc(80px + 150 * var(--fluid-basis)), 230px) clamp(136px, calc(136px + 150 * var(--fluid-basis)), 286px);
+    max-width: calc(850px + calc((#{"230 * 100"} / var(--cq-ref) * 1cqw)) + calc((#{"286 * 100"} / var(--cq-ref) * 1cqw)));
+    gap: rem(102);
+    grid-template-areas: "img content";
+  }
+  @include mq('xl') {
+    padding-inline:  clamp(100px, calc((#{"230 * 100"} / var(--cq-ref) * 1cqw)), 230px) clamp(136px, calc((#{"286 * 100"} / var(--cq-ref) * 1cqw)), 286px);
+    max-width: calc(1306px - calc((#{"230 * 100"} / var(--cq-ref) * 1cqw)) + calc((#{"286 * 100"} / var(--cq-ref) * 1cqw)));  }
+}
+
+
+.about-mv__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: rem(99);
+  margin-inline: auto;
+  @include mq('md') {
+    margin-left: auto;
+    grid-area: content;
+    margin-top: rem(-11);
+  }
+  }
+  
+  
+  .about-mv__en-title {
+    color: var(--sub-title-gray);
+    font-family: var(--font-family-second);
+    font-size: rem(14);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    letter-spacing: calc(2.1 / 14 * 1em);
+    padding: rem(2) rem(18) rem(4) rem(18);
+    border-radius: 1px;
+  background: url('../images/common/works-bg_white.webp') repeat top center / 100%;
+  @include mq('xl') {
+   font-size: clamp(14px, calc(14px + 2 * var(--fluid-basis-2)), 16px);
+  }
+  }
+  
+  .about-mv__title {
+  margin-top: rem(8);
+  @include mq('md') {
+  margin-top: rem(11);
+  }
+  }
+  
+  .about-mv__title-img {
+  height: auto;
+  object-fit: contain;
+  }
+  
+  
+
+.about-mv__img-wrap {
+  border-radius: 1px;
+  @media (max-width: 767px) {
+  margin-top: rem(38);
+  }
+  @include mq('md') {
+    height: 100%;
+    grid-area: img;
+  }
+}
+
+.about-mv__img {
+  border-radius: 1px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 330 / 287;
+  @include mq('md') {
+    aspect-ratio: 613 / 461;
+  }
+}
+

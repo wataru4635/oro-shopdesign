@@ -6,8 +6,7 @@
     <div class="sub-mv__content sub-mv__content--works">
       <p class="sub-mv__en-title">works</p>
       <p class="sub-mv__title">
-        <img src="<?php echo IMAGEPATH; ?>/common/works-title.webp" alt="施工事例" width="98" height="24"
-          class="sub-mv__title-img">
+        <img src="<?php echo IMAGEPATH; ?>/common/works-title.webp" alt="施工事例" width="98" height="24" class="sub-mv__title-img">
       </p>
     </div>
   </section>

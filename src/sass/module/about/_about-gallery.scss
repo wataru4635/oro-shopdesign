@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.about-gallery {
+@include mq('md') {
+margin-top: rem(92);
+}
+}
+
+.about-gallery__inner {
+margin-inline: auto;
+padding-inline: var(--inner-padding);
+max-width: 500px;
+@include mq('md') {
+max-width: calc(905px + 2 * var(--inner-padding));
+}
+}
+
+.about-gallery__group {
+display: grid;
+@include mq('md') {
+  grid-template-areas: "img02 img01";
+}
+}
+
+.about-gallery__group + .about-gallery__group {
+@include mq('md') {
+margin-top: rem(76);
+}
+}
+
+.about-gallery__group--top {
+@include mq('md') {
+grid-template-columns: 451fr 406fr;
+gap: rem(47);
+align-items: flex-end;
+}
+}
+.about-gallery__group--bottom {
+@include mq('md') {
+grid-template-columns: 375fr 469fr;
+gap: rem(60);
+}
+}
+
+.about-gallery__item {
+  @media (max-width: 767px) {
+  margin-top: rem(59);
+  }
+}
+
+.about-gallery__item--01,
+.about-gallery__item--03 {
+@include mq('md') {
+grid-area: img01;
+}
+}
+
+.about-gallery__item--02,
+.about-gallery__item--04 {
+@include mq('md') {
+grid-area: img02;
+}
+}
+
+.about-gallery__item--01 {
+  @media (max-width: 767px) {
+  width: 75.156%;
+  margin-left: auto;
+  }
+  @include mq('md') {
+  margin-bottom: rem(68);
+  }
+
+  & .about-gallery__img {
+    aspect-ratio: 248 / 330.71;
+    @include mq('md') {
+      aspect-ratio: 406 / 541;
+    }
+  }
+}
+
+.about-gallery__item--02 {
+  @media (max-width: 767px) {
+  width: 87.274%;
+  margin-right: auto;
+  }
+  & .about-gallery__img {
+    aspect-ratio: 288 / 216;
+    @include mq('md') {
+      aspect-ratio: 451 / 338;
+    }
+  }
+}
+
+.about-gallery__item--03 {
+  @media (max-width: 767px) {
+    width: 87.274%;
+    margin-left: auto;
+    }
+  & .about-gallery__img {
+    aspect-ratio: 288 / 216;
+    @include mq('md') {
+      aspect-ratio: 469 / 351;
+    }
+  }
+}
+
+.about-gallery__item--04 {
+  @media (max-width: 767px) {
+    width: 87.274%;
+    margin-right: auto;
+    }
+@include mq('md') {
+margin-top: rem(82);
+}
+
+  & .about-gallery__img {
+    aspect-ratio: 288 / 384;
+    @include mq('md') {
+      aspect-ratio: 375 / 499;
+    }
+  }
+}
+
+.about-gallery__img {
+  height: auto;
+  object-fit: cover;
+  }

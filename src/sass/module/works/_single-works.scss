@@ -4,11 +4,11 @@
 }
 
 .single-works__top {
-background: url('../images/works/single-works-bg-sp.webp') repeat center center / auto;
+background: url('../images/works/single-works-bg-sp.webp') repeat top center / 100%;
 padding-block: rem(30) rem(60);
 @include mq('md') {
 padding-block: rem(87) rem(120);
-background: url('../images/works/single-works-bg.webp') repeat center center / auto;
+background: url('../images/works/single-works-bg.webp') repeat top center / 100%;
 }
 }
 
@@ -212,7 +212,7 @@ figure {
 }
 
 .single-works__bottom {
-padding-block: rem(84) rem(65);
+padding-block: rem(49) rem(65);
 @include mq('md') {
 padding-block: rem(85);
 }

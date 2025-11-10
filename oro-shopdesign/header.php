@@ -17,10 +17,14 @@
     } elseif (is_home()) {
         $blog_page_title = get_the_title(get_option('page_for_posts'));
         echo esc_html($blog_page_title . '｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
-    } elseif (is_singular('post')) {
+    } elseif (is_singular('post') || is_singular('blog') || is_singular('works')) {
         echo esc_html(get_the_title() . '｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
     } elseif (is_page()) {
         echo esc_html(get_the_title() . '｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_post_type_archive('works')) {
+        echo esc_html('施工事例｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_post_type_archive('blog')) {
+        echo esc_html('読みもの｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
     } elseif (is_category()) {
         echo esc_html(single_cat_title('', false) . '一覧｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
     } elseif (is_archive()) {
@@ -43,8 +47,13 @@
         echo esc_attr(get_the_title(get_option('page_for_posts')) . ' - ' . $base_description);
     } elseif (is_page()) {
         echo esc_attr(get_the_title() . ' - ' . $base_description);
-    } elseif (is_singular('post')) {
-        echo esc_attr(get_the_title() . ' - ' . get_the_excerpt());
+    } elseif (is_post_type_archive('works')) {
+        echo esc_attr('施工事例 - ' . $base_description);
+    } elseif (is_post_type_archive('blog')) {
+        echo esc_attr('読みもの - ' . $base_description);
+    } elseif (is_singular('post') || is_singular('blog') || is_singular('works')) {
+        $excerpt = get_the_excerpt();
+        echo esc_attr(get_the_title() . ' - ' . ($excerpt ? $excerpt : $base_description));
     } elseif (is_category()) {
         echo esc_attr(single_cat_title('', false) . '一覧 - ' . $base_description);
     } elseif (is_archive()) {
@@ -75,13 +84,54 @@
     }
   ?>" />
   <!-- ogp -->
-  <meta property="og:title" content="【公式】店舗デザインならoroショップデザイン｜静岡県浜松市" />
-  <meta property="og:type" content="<?php echo esc_attr(is_singular('post') ? 'article' : 'website'); ?>">
-  <meta property="og:url" content="https://oro-shopdesign.com/" />
-  <meta property="og:image" content="https://oro-shopdesign.com/wp-content/themes/oro-shopdesign/assets/images/og_img.jpg" />
+  <meta property="og:title" content="<?php
+    if (is_front_page()) {
+        echo esc_attr('【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_singular('post') || is_singular('blog') || is_singular('works')) {
+        echo esc_attr(get_the_title() . '｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_page()) {
+        echo esc_attr(get_the_title() . '｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_post_type_archive('works')) {
+        echo esc_attr('施工事例｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } elseif (is_post_type_archive('blog')) {
+        echo esc_attr('読みもの｜【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    } else {
+        echo esc_attr('【公式】店舗デザインならoroショップデザイン｜静岡県浜松市');
+    }
+  ?>" />
+  <meta property="og:type" content="<?php echo esc_attr((is_singular('post') || is_singular('blog') || is_singular('works')) ? 'article' : 'website'); ?>">
+  <meta property="og:url" content="<?php
+    if (is_front_page()) {
+        echo esc_url(home_url('/'));
+    } elseif (is_singular()) {
+        echo esc_url(get_permalink());
+    } elseif (is_category() || is_tag() || is_tax()) {
+        echo esc_url(get_term_link(get_queried_object()));
+    } elseif (is_post_type_archive()) {
+        echo esc_url(get_post_type_archive_link(get_post_type()));
+    } else {
+        echo esc_url(home_url('/'));
+    }
+  ?>" />
+  <meta property="og:image" content="<?php echo esc_url(home_url('/wp-content/themes/oro-shopdesign/assets/images/og_img.jpg')); ?>" />
   <meta property="og:site_name" content="【公式】店舗デザインならoroショップデザイン｜静岡県浜松市" />
-  <meta property="og:description"
-    content="浜松市・磐田市・豊橋市で店舗設計・オフィスデザインの実績多数。飲食店・エステサロン・パーソナルジムなど、プランから内装デザイン、施工までトータルでサポートいたします。" />
+  <meta property="og:description" content="<?php
+    $base_description = '浜松市・磐田市・豊橋市で店舗設計・オフィスデザインの実績多数。飲食店・エステサロン・パーソナルジムなど、プランから内装デザイン、施工までトータルでサポートいたします。';
+    if (is_front_page()) {
+        echo esc_attr($base_description);
+    } elseif (is_singular('post') || is_singular('blog') || is_singular('works')) {
+        $excerpt = get_the_excerpt();
+        echo esc_attr($excerpt ? $excerpt : $base_description);
+    } elseif (is_page()) {
+        echo esc_attr(get_the_title() . ' - ' . $base_description);
+    } elseif (is_post_type_archive('works')) {
+        echo esc_attr('施工事例 - ' . $base_description);
+    } elseif (is_post_type_archive('blog')) {
+        echo esc_attr('読みもの - ' . $base_description);
+    } else {
+        echo esc_attr($base_description);
+    }
+  ?>" />
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/body-bg-sp.webp">
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/body-bg.webp" media="(min-width: 768px)">
   <?php if (is_front_page() || is_post_type_archive('works')): ?>
@@ -94,9 +144,17 @@
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/card-bg_orange.webp">
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/link-btn-bg_yellow.webp">
   <?php endif; ?>
+  <?php if (is_home()): ?>
+  <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/works-bg_white.webp">
+  <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/common/card-bg_green.webp">
+  <?php endif; ?>
   <?php if (is_singular('works')): ?>
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/works/single-works-bg-sp.webp">
   <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/works/single-works-bg.webp" media="(min-width: 768px)">
+  <?php endif; ?>
+  <?php if (is_singular('blog')): ?>
+  <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/blog/single-blog-bg-sp.webp">
+  <link rel="preload" as="image" href="<?php echo IMAGEPATH; ?>/blog/single-blog-bg.webp" media="(min-width: 768px)">
   <?php endif; ?>
   <?php wp_head(); ?>
 </head>
@@ -112,8 +170,7 @@
           $logo_tag = (is_front_page() || is_home()) ? 'h1' : 'div';
         ?>
         <<?php echo esc_html($logo_tag); ?> class="header__logo">
-          <img src="<?php echo IMAGEPATH; ?>/common/logo.webp" alt="oro shopdesignロゴ画像" class="header__logo-img" width="103.477"
-            height="30">
+          <img src="<?php echo IMAGEPATH; ?>/common/logo.webp" alt="oro shopdesignロゴ画像" width="103.477" height="30" class="header__logo-img">
         </<?php echo esc_html($logo_tag); ?>>
       </a>
     </div>
@@ -164,7 +221,7 @@
             </a>
       </div>
       <div class="drawer__logo">
-        <a href="https://oro-sekkei.com/" class="drawer__logo-link" target="_blank" rel="noopener noreferrer"><img src="<?php echo IMAGEPATH; ?>/common/oro-logo.webp" alt="oro株式会社のロゴ" class="drawer__logo-img" width="120" height="53" loading="lazy"></a>
+        <a href="https://oro-sekkei.com/" class="drawer__logo-link" target="_blank" rel="noopener noreferrer"><img src="<?php echo IMAGEPATH; ?>/common/oro-logo.webp" alt="oro株式会社のロゴ" width="120" height="53" loading="lazy" class="drawer__logo-img"></a>
       </div>
     </div>
   </div>

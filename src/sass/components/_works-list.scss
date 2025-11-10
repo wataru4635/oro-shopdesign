@@ -11,12 +11,12 @@
 }
 
 .works-item {
-  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
   display: block;
 }
 
 .works-item.is-active {
-  background: url('../images/common/works-bg_blue.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_blue.webp') repeat top center / 100% 100%;
   transition: background var(--duration-semi-long) ease-in-out;
   & .works-item__lead {
     color: var(--white);
@@ -44,7 +44,7 @@
   }
   @media (any-hover: hover) {
     &:hover {
-      background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+      background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
       & .works-item__lead {
         color: var(--main-blue);
       }

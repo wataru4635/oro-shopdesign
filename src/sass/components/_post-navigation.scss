@@ -15,9 +15,6 @@ gap: clamp(50px, calc(50px + 87 * var(--fluid-basis)), 137px);
 .next-post {
   @media (hover: hover) {
     &:hover {
-      .post-title {
-        color: var(--main-blue);
-      }
 
       .prev-arrow {
         translate: -5px 0;
@@ -31,9 +28,6 @@ gap: clamp(50px, calc(50px + 87 * var(--fluid-basis)), 137px);
 
   @media (hover: none) {
     &:active {
-      .post-title {
-        color: var(--main-blue);
-      }
 
       .prev-arrow {
         translate: -5px 0;
@@ -46,6 +40,43 @@ gap: clamp(50px, calc(50px + 87 * var(--fluid-basis)), 137px);
   }
 }
 
+.single-works__post-navigation .prev-post,
+.single-works__post-navigation .next-post {
+  @media (hover: hover) {
+    &:hover {
+      .post-title {
+        color: var(--main-blue);
+      }
+    }
+  }
+  
+  @media (hover: none) {
+    &:active {
+      .post-title {
+        color: var(--main-blue);
+      }
+    }
+  }
+}
+
+.single-blog__post-navigation .prev-post,
+.single-blog__post-navigation .next-post {
+  @media (hover: hover) {
+    &:hover {
+      .post-title {
+        color: var(--main-green);
+      }
+    }
+  }
+  
+  @media (hover: none) {
+    &:active {
+      .post-title {
+        color: var(--main-green);
+      }
+    }
+  }
+}
 .prev-post {
   display: grid;
   grid-template-columns: max-content auto;
@@ -90,7 +121,7 @@ letter-spacing: calc(1.5 / 15 * 1em);
 .prev-arrow,
 .next-arrow {
   width: rem(36);
-  background: url('../images/common/post-arrow.svg') no-repeat center center / contain;
+  background: url('../images/common/post-arrow.svg') no-repeat top center / 100%;
   transition: translate var(--duration-base) ease;
   aspect-ratio: 1 / 1;
 }

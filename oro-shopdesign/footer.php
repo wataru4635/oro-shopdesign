@@ -1,5 +1,5 @@
 <button class="to-top" aria-label="トップに戻るボタン">
-  <img src="<?php echo IMAGEPATH; ?>/common/to-top.svg" class="to-top__img" alt="トップに戻るボタン" width="44" height="44">
+  <img src="<?php echo IMAGEPATH; ?>/common/to-top.svg" alt="トップに戻るボタン" width="44" height="44" class="to-top__img">
 </button>
 
 <footer class="footer">

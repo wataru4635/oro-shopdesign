@@ -90,19 +90,19 @@ Template Name: 会社紹介
 
       <ul class="about-gallery__group about-gallery__group--top">
         <li class="about-gallery__item about-gallery__item--01 js-scaleImg">
-          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-01.webp" alt="木天井と大開口が印象的なリビングダイニング" width="406" height="541" loading="lazy" class="about-gallery__img" />
+          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-01.webp" alt="白い三角屋根と大きな窓が特徴のモダンな住宅の外観" width="406" height="541" loading="lazy" class="about-gallery__img" />
         </li>
         <li class="about-gallery__item about-gallery__item--02 js-scaleImg">
-          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-02.webp" alt="切妻の大窓をもつ白い外観の住宅" width="338" height="451" loading="lazy" class="about-gallery__img" />
+          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-02.webp" alt="木の天井と長いテーブルが印象的な明るい室内空間" width="338" height="451" loading="lazy" class="about-gallery__img" />
         </li>
       </ul>
 
       <ul class="about-gallery__group about-gallery__group--bottom">
         <li class="about-gallery__item about-gallery__item--03 js-scaleImg">
-          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-03.webp" alt="夕景に照らされた切妻窓の住宅外観" width="469" height="351" loading="lazy" class="about-gallery__img" />
+          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-03.webp" alt="夜間、窓から暖かな光が漏れる美しい外観の建物" width="469" height="351" loading="lazy" class="about-gallery__img" />
         </li>
         <li class="about-gallery__item about-gallery__item--04 js-scaleImg">
-          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-04.webp" alt="白壁の通路と奥に見える作業テーブル" width="375" height="499" loading="lazy" class="about-gallery__img --delay-1" />
+          <img src="<?php echo IMAGEPATH; ?>/about/about-gallery-04.webp" alt="白壁とカラフルな椅子が並ぶシンプルで明るいワークスペース" width="375" height="499" loading="lazy" class="about-gallery__img --delay-1" />
         </li>
       </ul>
 

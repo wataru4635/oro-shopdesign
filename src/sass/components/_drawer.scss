@@ -10,7 +10,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--duration-semi-long) ease, visibility var(--duration-semi-long) ease;
-  background: url('../images/common/drawer-bg.webp') no-repeat center center / cover;
+  background: url('../images/common/drawer-bg.webp') repeat top center / 100%;
   container-type: inline-size;
   @media (max-width: 767px) {
     padding-block: rem(136) rem(114);

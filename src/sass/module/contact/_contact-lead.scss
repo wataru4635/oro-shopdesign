@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.contact-lead {
+  padding-bottom: rem(43);
+@include mq('md') {
+  margin-top: rem(33);
+  padding-bottom: rem(38);
+}
+}
+
+.contact-lead__inner {
+padding-inline: var(--inner-padding);
+margin-inline: auto;
+max-width: 500px;
+@include mq('md') {
+  max-width: calc(615px + 2 * var(--inner-padding));
+}
+}
+
+.contact-lead__text {
+  font-size: rem(15);
+  font-weight: var(--font-weight-regular);
+  line-height: 2;
+  letter-spacing: calc(1.5 / 15 * 1em);
+}
+

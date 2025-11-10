@@ -42,8 +42,8 @@
 }
 
 .bg-body {
-  background: url('../images/common/body-bg-sp.webp') no-repeat center top / cover;
+  background: url('../images/common/body-bg-sp.webp') repeat top center / 100%;
   @include mq('md') {
-    background: url('../images/common/body-bg.webp') no-repeat center top / cover;
+    background: url('../images/common/body-bg.webp') repeat top center / 100%;
   }
 }

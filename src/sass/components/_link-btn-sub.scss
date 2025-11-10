@@ -1,16 +1,15 @@
 @use "global" as *;
 
 .link-btn-sub {
-  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_white.webp') repeat top center / 100%;
   padding-block: rem(21) rem(22);
   margin-inline: auto;
   text-align: center;
   padding-inline: rem(11);
-  transition: opacity var(--duration-base) ease;
   width: 100%;
   @media (any-hover: hover) {
-    &:hover {
-      opacity: 0.7;
+    &:hover .link-btn-sub__text::after{
+      translate: rem(6) 0;
     }
   }
   @include mq('md') {
@@ -20,15 +19,20 @@
 }
 
 .link-btn-sub--white {
-  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_white.webp') repeat top center / 100%;
   & .link-btn-sub__text {
     color: var(--text-black);
     border: 1px solid var(--text-black);
+    padding-inline: rem(40) rem(11);
   }
 }
 
 .link-btn-sub--blue {
-  background: url('../images/common/works-bg_blue.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_blue.webp') repeat top center / 100%;
+  & .link-btn-sub__text {
+    padding-inline: rem(30) rem(11);
+    gap: rem(10);
+  }
 }
 
 .link-btn-sub--blue .link-btn-sub__text {
@@ -36,9 +40,22 @@
   border: 1px solid var(--white);
 }
 
+.link-btn-sub--green {
+  background: url('../images/common/link-btn-bg_green.webp') repeat top center / 100%;
+  & .link-btn-sub__text {
+    padding-inline: rem(30) rem(11);
+    gap: rem(10);
+  }
+} 
+
+.link-btn-sub--green .link-btn-sub__text {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+
 .link-btn-sub__text {
   min-width: rem(214);
-  
   border-radius: calc(infinity * 1px);
   font-family: var(--font-family-second);
   font-size: rem(15);
@@ -47,7 +64,28 @@
   line-height: 2;
   padding-block: rem(7) rem(8);
   padding-inline: rem(15) rem(11);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(9);
   @include mq('md') {
     min-width: rem(214);
   }
+}
+
+.link-btn-sub__text::after {
+  content: '';
+  display: inline-block;
+  width: rem(31);
+  height: auto;
+  aspect-ratio:  31 / 12.834;
+  background-color: currentColor;
+  -webkit-mask-image: url('../images/common/arrow-right-link.svg');
+  mask-image: url('../images/common/arrow-right-link.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: translate var(--duration-base) ease-in-out;
+  margin-top: rem(2);
 }

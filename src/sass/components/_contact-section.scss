@@ -7,6 +7,12 @@
       margin-top: rem(131);
     }
   }
+  &--flow {
+    margin-top: rem(61);
+    @include mq('md') {
+      margin-top: rem(130);
+    }
+  }
 }
 
 .contact-section__inner {

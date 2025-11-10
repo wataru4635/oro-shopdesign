@@ -2,7 +2,7 @@
 
 window.addEventListener('load', () => {
   setTimeout(() => {
-    var mv_swiper = new Swiper(".js-mv-swiper", {
+    const mv_swiper = new Swiper(".js-mv-swiper", {
       loop: true,
       speed: 2000,
       effect: "fade",

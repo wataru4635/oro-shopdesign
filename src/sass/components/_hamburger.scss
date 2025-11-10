@@ -8,7 +8,7 @@
   transition: right 0s;
   @include mq('md') {
     top: rem(39);
-    right: clamp(10px, calc(10px + 29 * var(--fluid-basis)), 59px);
+    right: clamp(10px, calc(10px + 49 * var(--fluid-basis)), 59px);
   }
 }
 
@@ -22,7 +22,7 @@ body.body-hidden .hamburger {
 .hamburger__button {
   width: rem(62);
   aspect-ratio: 1;
-  background: url('../images/common/hamburger-bg.webp') no-repeat center center / cover;
+  background: url('../images/common/hamburger-bg.webp') repeat top center / 100%;
   border-radius: calc(infinity * 1px);
   position: relative;
 

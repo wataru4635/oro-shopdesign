@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .works {
-  padding-block: rem(5) rem(65);
+  padding-block: 0 rem(65);
   @include mq('md') {
     padding-block: rem(16) rem(85);
   }

@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .footer {
-  background: url('../images/common/footer-bg.webp') no-repeat center center / cover;
+  background: url('../images/common/footer-bg-sp.webp') repeat top center / 100%;
   color: var(--white);
   padding-block: rem(49) rem(34);
   @include mq('md') {
     padding-block: rem(84) rem(27);
+    background: url('../images/common/footer-bg.webp') repeat top center / 100%;
   }
 }
 
@@ -24,7 +25,7 @@
       "copyright";
   }
   @include mq('md') {
-    max-width: calc(908px + 2 * var(--inner-padding));
+    max-width: calc(950px + 2 * var(--inner-padding));
   }
 }
 

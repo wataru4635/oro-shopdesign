@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .top-works {
-  margin-top: rem(55);
+  margin-top: rem(48);
   @include mq('md') {
     margin-top: rem(44);
   }

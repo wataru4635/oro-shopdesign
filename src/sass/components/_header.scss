@@ -3,9 +3,9 @@
 .header {
   display: flex;
   align-items: flex-end;
-  height: rem(90);
+  height: rem(84);
   @include mq('md') {
-    height: rem(76);
+    height: rem(97);
   }
 }
 
@@ -20,7 +20,7 @@
   width: rem(172);
   transition: opacity var(--duration-base) ease;
   @include mq('md') {
-    width: clamp(172px, calc(172px + 30 * var(--fluid-basis-2)), 202px);
+    width: rem(272);
   }
   @media (hover: hover) {
     &:hover {

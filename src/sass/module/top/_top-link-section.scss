@@ -47,7 +47,7 @@
     background-color: var(--main-green);
   }
   & .top-link-section__card.is-active {
-    background: url('../images/common/card-bg_green.webp') no-repeat center center / cover;
+    background: url('../images/common/card-bg_green.webp') repeat top center / 100% 100%;
     transition: background var(--duration-semi-long) ease-in-out;
     & .top-link-section__heading,
     & .top-link-section__text {
@@ -70,7 +70,7 @@
     }
     @media (any-hover: hover) {
       &:hover {
-        background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+        background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
         & .top-link-section__heading,
         & .top-link-section__text {
           color: var(--main-green);
@@ -95,8 +95,9 @@
     background-color: var(--main-red);
   }
   & .top-link-section__card.is-active {
-    background: url('../images/common/card-bg_red.webp') no-repeat center center / cover;
+    background: url('../images/common/card-bg_red.webp') repeat top center / 100% 100%;
     transition: background var(--duration-semi-long) ease-in-out;
+
     & .top-link-section__heading,
     & .top-link-section__text {
       color: var(--white);
@@ -118,7 +119,7 @@
     }
     @media (any-hover: hover) {
       &:hover {
-        background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+        background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
         & .top-link-section__heading,
         & .top-link-section__text {
           color: var(--main-red);
@@ -143,7 +144,7 @@
     background-color: var(--main-orange);
   }
   & .top-link-section__card.is-active {
-    background: url('../images/common/card-bg_orange.webp') no-repeat center center / cover;
+    background: url('../images/common/card-bg_orange.webp') repeat top center / 100% 100%;
     transition: background var(--duration-semi-long) ease-in-out;
     & .top-link-section__heading,
     & .top-link-section__text {
@@ -166,7 +167,7 @@
     }
     @media (any-hover: hover) {
       &:hover {
-        background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+        background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
         & .top-link-section__heading,
         & .top-link-section__text {
           color: var(--main-orange);
@@ -180,7 +181,7 @@
 }
 
 .top-link-section__card {
-  background: url('../images/common/works-bg_white.webp') no-repeat center center / cover;
+  background: url('../images/common/works-bg_white.webp') repeat top center / 100% 100%;
   display: block;
   padding: rem(17) rem(17) rem(36);
   margin-top: rem(30);
