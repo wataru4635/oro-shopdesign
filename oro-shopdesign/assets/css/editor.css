@@ -1,25 +1,41 @@
 .editor-styles-wrapper h2 {
   margin-top: 15px;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 0;
+  font-weight: 400;
+}
+
+.editor-styles-wrapper.post-type-blog h2 {
+  padding-block: 8px;
+  border-top: 2px solid #e2e2e2;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.editor-styles-wrapper.post-type-works h2 {
+  padding-block: 8px;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 .editor-styles-wrapper h3 {
   margin-top: 15px;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .editor-styles-wrapper h4 {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .editor-styles-wrapper h5 {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .editor-styles-wrapper p {
@@ -43,6 +59,7 @@
 
 .editor-styles-wrapper ul li {
   font-size: 15px;
+  font-weight: 400;
 }
 
 .editor-styles-wrapper ol {
@@ -53,5 +70,6 @@
 
 .editor-styles-wrapper ol li {
   font-size: 15px;
+  font-weight: 400;
 }
 

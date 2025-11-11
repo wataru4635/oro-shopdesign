@@ -34,16 +34,12 @@
           <?php
           $en_title = get_field('works_en_title');
           $lead = get_field('works_lead');
-          $description = get_field('works_description');
           ?>
           <?php if ($en_title) : ?>
           <p class="single-works__en-title"><?php echo esc_html($en_title); ?></p>
           <?php endif; ?>
           <?php if ($lead) : ?>
           <p class="single-works__lead"><?php echo esc_html($lead); ?></p>
-          <?php endif; ?>
-          <?php if ($description) : ?>
-          <div class="single-works__description"><?php echo wpautop(wp_kses_post($description)); ?></div>
           <?php endif; ?>
           <div class="single-works__content">
             <?php the_content(); ?>

@@ -630,26 +630,34 @@ button {
 
 .single-blog__content {
 	color: var(--white);
-	margin-top: 1.5625rem;
+	margin-top: 1.625rem;
 }
 
 .single-blog__content h2 {
-	font-size: 1.375rem;
+	border-bottom: 2px solid var(--white);
+	border-top: 2px solid var(--white);
+	font-size: 1.25rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 .single-blog__content h3 {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
 .single-blog__content h4 {
-	font-size: 1.125rem;
+	font-size: 1rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
 .single-blog__content h5 {
-	font-size: 1rem;
+	font-size: 0.875rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
@@ -685,6 +693,7 @@ button {
 
 .single-blog__content ul li {
 	font-size: 0.9375rem;
+	font-weight: var(--font-weight-regular);
 	line-height: 1.5;
 	padding-left: 1.25rem;
 	text-indent: -1.125rem;
@@ -715,6 +724,7 @@ button {
 
 .single-blog__content ol li {
 	font-size: 0.9375rem;
+	font-weight: var(--font-weight-regular);
 	line-height: 1.5;
 	padding-left: 1.75rem;
 	text-indent: -0.75rem;
@@ -1766,40 +1776,39 @@ input:invalid:not(:placeholder-shown) + .format-error-message {
 	font-weight: var(--font-weight-normal);
 	letter-spacing: 0.1em;
 	line-height: 2;
-	margin-top: 1.625rem;
-}
-
-.single-works__description {
-	color: var(--white);
-	font-size: 0.9375rem;
-	font-weight: var(--font-weight-regular);
-	letter-spacing: 0.1em;
-	line-height: 2;
 	margin-top: 0.6875rem;
 }
 
 .single-works__content {
 	color: var(--white);
-	margin-top: 1.5625rem;
+	margin-top: 1.625rem;
 }
 
 .single-works__content h2 {
-	font-size: 1.375rem;
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
+	font-size: 1.25rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 .single-works__content h3 {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
 .single-works__content h4 {
-	font-size: 1.125rem;
+	font-size: 1rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
 .single-works__content h5 {
-	font-size: 1rem;
+	font-size: 0.875rem;
+	font-weight: var(--font-weight-regular);
 	margin-top: 0.9375rem;
 }
 
@@ -1835,6 +1844,7 @@ input:invalid:not(:placeholder-shown) + .format-error-message {
 
 .single-works__content ul li {
 	font-size: 0.9375rem;
+	font-weight: var(--font-weight-regular);
 	line-height: 1.5;
 	padding-left: 1.25rem;
 	text-indent: -1.125rem;
@@ -1865,6 +1875,7 @@ input:invalid:not(:placeholder-shown) + .format-error-message {
 
 .single-works__content ol li {
 	font-size: 0.9375rem;
+	font-weight: var(--font-weight-regular);
 	line-height: 1.5;
 	padding-left: 1.75rem;
 	text-indent: -0.75rem;
@@ -2592,7 +2603,19 @@ body.body-hidden {
 	font-weight: var(--font-weight-bold);
 	letter-spacing: 0.05em;
 	padding-left: 0.125rem;
+	padding-left: 0.625rem;
 	padding-right: 0.125rem;
+	padding-right: 0.625rem;
+}
+
+.pagination .dots + .page-link,
+.pagination .dots + .current-page {
+	margin-left: -0.625rem;
+}
+
+.pagination .page-link + .dots,
+.pagination .current-page + .dots {
+	margin-left: -0.625rem;
 }
 
 .pagination .page-link {
@@ -2614,7 +2637,6 @@ body.body-hidden {
 }
 
 .pagination .current-page {
-	margin-right: 1.5625rem;
 	position: relative;
 }
 
@@ -2628,10 +2650,6 @@ body.body-hidden {
 	position: absolute;
 	translate: -50% 0;
 	width: 100%;
-}
-
-.page-link + .page-link {
-	margin-left: 1.5625rem;
 }
 
 .pagination .dots {
@@ -3398,25 +3416,9 @@ html {
 }
 
 .single-blog__content {
-	margin-top: 4.875rem;
+	margin-top: 3.375rem;
 	padding-left: 2.0625rem;
 	padding-right: 2.0625rem;
-}
-
-.single-blog__content h2 {
-	font-size: 1.5rem;
-}
-
-.single-blog__content h3 {
-	font-size: 1.375rem;
-}
-
-.single-blog__content h4 {
-	font-size: 1.25rem;
-}
-
-.single-blog__content h5 {
-	font-size: 1.125rem;
 }
 
 .single-blog__content figure {
@@ -3836,29 +3838,13 @@ html {
 }
 
 .single-works__lead {
-	margin-top: 1.9375rem;
+	margin-top: 0.9375rem;
 }
 
 .single-works__content {
-	margin-top: 4.875rem;
+	margin-top: 3.375rem;
 	padding-left: 2.0625rem;
 	padding-right: 2.0625rem;
-}
-
-.single-works__content h2 {
-	font-size: 1.5rem;
-}
-
-.single-works__content h3 {
-	font-size: 1.375rem;
-}
-
-.single-works__content h4 {
-	font-size: 1.25rem;
-}
-
-.single-works__content h5 {
-	font-size: 1.125rem;
 }
 
 .single-works__content figure {

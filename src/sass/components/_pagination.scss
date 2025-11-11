@@ -21,8 +21,21 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: calc(1.25 / 25 * 1em);
   padding-inline: rem(2);
+  padding-inline: rem(10);
   
 }
+
+// dotと隣接する数字の余白を狭くする
+.pagination .dots + .page-link,
+.pagination .dots + .current-page {
+  margin-left: rem(-10);
+}
+
+.pagination .page-link + .dots,
+.pagination .current-page + .dots {
+  margin-left: rem(-10);
+}
+
 .pagination .page-link {
   position: relative;
   &::after {
@@ -47,7 +60,6 @@
   }
 }
 .pagination .current-page {
-margin-right: rem(25);
 position: relative;
 &::after {
   content: '';
@@ -61,12 +73,6 @@ position: relative;
   background-color: var(--white);
 }
 }
-
-.page-link + .page-link {
-  margin-left: rem(25);
-}
-
-
 
 .pagination .dots {
   font-family: var(--font-family-second);
